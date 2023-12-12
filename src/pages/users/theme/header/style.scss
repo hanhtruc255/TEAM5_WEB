@@ -1,0 +1,22 @@
+
+.header_top {
+    background: #C2E8C7;
+}
+
+.header_top_right {
+    display: grid;
+    justify-content: end;
+    ul {display:flex;
+        column-gap: 10px;
+
+        a{
+            color:#041E42 ;
+        }
+    }
+
+    li{
+
+        list-style-type: none;
+    }
+        
+}
