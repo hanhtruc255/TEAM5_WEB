@@ -12,20 +12,10 @@ body{
     margin: 0;
 }
 
-.container{
-    height: 70px;
-    padding-left: 30px;
-    padding-right: 30px;
-    // background: map.get($theme-colors,"main");
-    // color: map.get($theme-colors,"text");
-}
 
 .row{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.col-6{
-    flex: 0 0 50%;
-    max-width: 50%;
-}
