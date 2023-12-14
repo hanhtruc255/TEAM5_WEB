@@ -4,6 +4,10 @@ import {ROUTERS} from "./utils/router";
 import { Routes, Route} from "react-router-dom";
 import Cart from "./pages/users/cart";
 import AboutUs from "./pages/users/aboutus";
+import Login from "./pages/users/loginsignin/login"
+import Item from "./component/Item";
+
+
 
 
 
@@ -18,7 +22,13 @@ const renderUserRouter=() =>{
         {path: ROUTERS.USER.ABOUTUS,
             component:<AboutUs/>
         },
-        
+        {path: ROUTERS.USER.LOGIN,
+            component:<Login/>
+        },
+        {path: ROUTERS.USER.ITEM,
+            component:<Item/>
+        },
+    
         
     ];
     return (

@@ -5,80 +5,84 @@ import { BsCart3 } from "react-icons/bs";
 import { BsPerson } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
 import { Link } from 'react-router-dom';
-import logo from '/HOMETEK_PJ/fe/src/assets/user/Images/LOGO-HomeTek.png';
+import logo from '/HOMETEK_PJ/fe/src/assets/LOGO-HomeTek.png';
 import React from "react";
+import Productpage from "../../productpage";
+import Breadcrum from "../../../../component/Breadcrum";
 
 
 const Header= () =>{
-    const [Menus, setMenus] = useState ([
-        {name: "Về chúng tôi",
+    const [Menus, setMenu] = useState ([
+        {category: "Về chúng tôi",
          path: ""
         },
-        {name:"Bếp",
-         path: "",
+        {category:"Bếp",
+         path: "/bep",
          isShowSubmenu: false,
          child: [
-            {name:"Tất cả sản phẩm",
-            path: "",
+            {sub_category:"Tất cả sản phẩm",
+            path: "/bep/tat-ca-san-pham",
             },
-            {name:"Nồi chiên không dầu",
-            path: "",
+            {sub_category:"Nồi chiên không dầu",
+            path: "bep/noi-chien-khong-dau",
             },
-            {name:"Nồi cơm thông minh",
-            path: "",
+            {sub_category:"Nồi cơm thông minh",
+            path: "/bep/noi-com-thong-minh",
             },
-            {name:"Máy sửa thực phẩm",
-            path: "",
+            {sub_category:"Máy rửa thực phẩm",
+            path: "/bep/may-rua-thuc-pham",
             },
-            {name:"Máy khử trùng đồ dùng bếp",
-            path: "",
+            {sub_category:"Máy khử trùng đồ dùng bếp",
+            path: "/bep/may-khu-trung-do-dung-bep",
             }
 
          ]
         },
-        {name: "Dọn dẹp",
-         path: "",
+        {category: "Dọn dẹp",
+         path: "/don-dep",
          isShowSubmenu: false,
          child: [
-            {name:"Tất cả sản phẩm",
-            path: "",
+            {sub_category:"Tất cả sản phẩm",
+            path: "/don-dep/tat-ca-san-pham",
             },
-            {name:"Robot hút bụi lau nhà",
-            path: "",
+            {sub_category:"Robot hút bụi lau nhà",
+            path: "/don-dep/robot-hut-bui-lau-nha",
             },
-            {name:"Máy lọc không khí thông minh",
-            path: "",
+            {sub_category:"Máy lọc không khí thông minh",
+            path: "/don-dep/may-luc-khong-khi-thong-minh",
             },
-            {name:"Bàn chải đa năng",
-            path: "",
+            {sub_category:"Bàn chải đa năng",
+            path: "/don-dep/ban-chai-da-nang",
             }
          ]
         },
-        {name: "Tiện ích",
-         path: "",
+        {category: "Tiện ích",
+         path: "/tien-ich",
          isShowSubmenu: false,
          child: [
-            {name:"Tất cả sản phẩm",
-            path: "",
+            {sub_category:"Tất cả sản phẩm",
+            path: "/tien-ich/tat-ca-san-pham",
             },
-            {name:"Máy tạo bọt rửa tay",
-            path: "",
+            {sub_category:"Máy tạo bọt rửa tay",
+            path: "/tien-ich/may-tao-bot-rua-tay",
             },
-            {name:"Loa trợ lý ảo thông minh",
-            path: "",
+            {sub_category:"Loa trợ lý ảo thông minh",
+            path: "/tien-ich/loa-tro-ly-ao-thong-minh",
             },
-            {name:"Công tắc thông minh",
-            path: "",
+            {sub_category:"Công tắc thông minh",
+            path: "/tien-ich/cong-tac-thong-minh",
             }
          ]
         },
-        {name: "Blog",
-         path: ""
+        {category: "Blog",
+         path: "/blog"
         },
-        {name: "Chính sách",
-         path: ""
+        {category: "Chính sách",
+         path: "/chinh-sach"
         },
     ])
+
+    
 
     return (
         <div>
@@ -97,12 +101,12 @@ const Header= () =>{
                     <div className="header__top__right">
                         <ul>
                             <li>
-                                <Link to ={""}><BsHeart /></Link>
+                                <Link to ={"/yeu-thich"}><BsHeart /></Link>
                                 </li>
-                            <li> <Link to = {""}><BsCart3 />
+                            <li> <Link to = {"/gio-hang"}><BsCart3 />
                                 </Link> 
                                 </li>
-                            <li> <Link to ={""}><BsPerson />
+                            <li> <Link to ={"/dang-nhap"}><BsPerson />
                             </Link>
                                 </li>
                         </ul>
@@ -114,27 +118,26 @@ const Header= () =>{
                     <ul>
                         {Menus?. map((menu,menukey) => (
                                 <li key={menukey} className="active">
-                                    <Link to ={menu?.path}>{menu?.name}
+                                    <Link to ={menu?.path}>{menu?.category}
                                     </Link>
                                     {menu.child &&(
                                         <ul className="header__menu__dropdown">
                                             {menu.child.map((childItem, childKey) =>(
                                                 <li key={`${childItem}-${childKey}`}>
-                                                    <Link to={childItem.path}>{childItem.name}</Link>
+                                                    <Link to={childItem.path}>{childItem.sub_category}</Link>
                                                 </li>
-                                            )
-
-                                            )}
-                                    
+                                            ))}
                                         </ul>
                                         )
                                     }
-
                                 </li>
                         ))},
                     </ul>
                 </nav>
             </div>
+
+            <Breadcrum/>
+            <Productpage/>
 
         </div>
     )
