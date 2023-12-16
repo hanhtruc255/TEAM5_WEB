@@ -2,11 +2,13 @@
 .item{
     width: 200px;
     height: 300px;
-    padding: 5px;
+    padding: 15px 15px ;
     margin: 25px 0px 35px 25px;
     border: 1px solid black;
     border-radius: 5px;
     color: #041E42;
+
+    
 
 
     img{
@@ -18,24 +20,35 @@
 //     width: 90%;
 //     height: 50px;
 //    }
-    p{
+    h4{
         font-size: 14px;
         padding: 5px;
          color: #041E42;
-
     }
 
     b{
         padding: 5px;
         font-size: 20px;
+        color: #041E42;
         :hover{
-            color: #0068FF;
+            color: #0068FF;}
+
+
+    }
+    a{text-decoration: none;
+        :visited{
+            color: #041E42;
+        }
+
+      
+        :link{
+            color: #041E42;
         }
     }
 
     .item__buy{
  
-        margin-top: 3px;
+        margin-top: 10px;
         display: flex;
     
         button{
@@ -47,19 +60,37 @@
 
         }
 
+        a{
+            border: 1px;
+            border-radius: 5px;
+            background: #F5F5F5;
+            padding: 5px 10px;
+            color: #041E42;
+            :visited{
+                color:#041E42;
+
+            };
+            :hover{
+                background: #C2E8C7;
+            };
+            
+
+        }
+
         .item__buy__icon{
             ul{
-                display: flex;                
+                display: flex;       
+                margin-left: 15px;
             }
 
             li{
-            
+                align-items: flex-end;
+                padding: 0px 5px;
                 list-style-type: none;
-                width: 15px;
-                margin-right: 10px;
+                width: 20px;
+                margin-right: 1px;
+
                 button{
-                    // width: fit-content;
-                    // height: fit-content;
                     border: none;
                     background: none;
                     font-size: 16px;

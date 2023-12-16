@@ -44,7 +44,10 @@
     }
         
 }
-
+.Menu__Category{
+    display: flex;
+    
+}
 input{
     width: 90%;
     height: 30px;
@@ -102,6 +105,8 @@ img{
                 color:#041E42;
             }    
         }
+        
+
         li:hover .header__menu__dropdown{
                 opacity: 1;
                 visibility: visible;}

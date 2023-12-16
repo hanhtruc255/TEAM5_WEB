@@ -1,4 +1,4 @@
-import {memo, useState} from "react";
+import {memo} from "react";
 import './Navbar.scss';
 import { BsHeart } from "react-icons/bs";
 import { BsCart3 } from "react-icons/bs";
@@ -11,9 +11,84 @@ import React from "react";
 
 
 const Navbar= () =>{
-    
 
-    const [Menus] = useState ([
+
+    return (
+        <nav>
+            <div className="Nav__top">
+                <div className="row">
+                    <div className="header__top__left">
+                        <Link to={"/"}> <img src={logo} alt="logo"></img></Link>
+                    </div>
+
+                    <div className="header__top__midle">
+                        <input type="text" placeholder="Bạn muốn tìm gì..."/>
+                            <Link to={""} className="iconSearch"><BsSearch /></Link>
+                        
+                    </div>
+ 
+                    <div className="header__top__right">
+                        <ul>
+                            <li>
+                                <Link to ={"/yeu-thich"}><BsHeart />
+                                </Link>
+                                </li>
+                            <li> <Link to = {"/gio-hang"}><BsCart3 />
+                                </Link> 
+                                </li>
+                            <li> <Link to ={"/dang-nhap"}><BsPerson />
+                            </Link>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="Nav__menu">
+                <nav className="Menu">
+                    <ul>
+                        <li> <Link to="/"> Về chúng tôi</Link> </li>
+                            <li> <Link to ={"/bep"}>Bếp</Link> 
+                                <ul className="header__menu__dropdown">
+                                    <li>
+                                        <Link to="/">Nồi cơm thông minh</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">Nồi chiên không dầu</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">Máy rửa thực phẩm</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">Máy khử trùng đồ dùng bếp</Link>
+                                    </li>
+                                </ul>
+                            
+                            </li>
+                            
+                            <li> <Link to ="/">Dọn dẹp</Link>
+                            <ul className="header__menu__dropdown">
+                                <li><Link to="/">Robot hút bụi lau nhà</Link></li>
+                                 
+                                <li><Link to="/">Máy lọc không khí thông minh</Link></li>
+
+                                <li><Link to="/">Bàn chảy đa năng</Link></li>
+                            </ul>
+                            <li></li>
+                            </li>
+                            <li> <Link to ="/">Tiện ích</Link>
+                                <ul className="header__menu__dropdown">
+                                    <li><Link to="/">Máy tạo bọt rửa tay</Link></li>
+                                    <li><Link to="/">Loa trợ lý ảo thông minh</Link></li>
+                                    <li><Link to="/">Công tắc thông minh</Link></li>
+                                </ul>
+                            </li> 
+                        <li> <Link to="/">Blog</Link> </li>
+                        <li> <Link to="/">Liện hệ</Link> </li>
+                        <li> <Link to="/">Chinh sách</Link> </li>
+
+{/* CÁCH 2 */}
+{/* 
+const [Menus] = useState ([
         {category: "Về chúng tôi",
          path:"",
         },
@@ -81,56 +156,24 @@ const Navbar= () =>{
         {category: "Chính sách",
          path: "/chinh-sach"
         },
-    ])
-    return (
-        <nav>
-            <div className="Nav__top">
-                <div className="row">
-                    <div className="header__top__left">
-                        <Link to={"/"}> <img src={logo} alt="logo"></img></Link>
-                    </div>
+    ]) */}
 
-                    <div className="header__top__midle">
-                        <input type="text" placeholder="Bạn muốn tìm gì..."/>
-                            <Link to={""} className="iconSearch"><BsSearch /></Link>
-                        
-                    </div>
- 
-                    <div className="header__top__right">
-                        <ul>
-                            <li>
-                                <Link to ={"/yeu-thich"}><BsHeart />
-                                </Link>
-                                </li>
-                            <li> <Link to = {"/gio-hang"}><BsCart3 />
-                                </Link> 
-                                </li>
-                            <li> <Link to ={"/dang-nhap"}><BsPerson />
-                            </Link>
-                                </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div className="Nav__menu">
-                <nav className="Menu">
-                    <ul>
-                        {Menus. map((menu,menukey) => (
+                        {/* {Menus. map((menu,menukey) => (
                                 <li key={menukey} className="active">
-                                    <Link to ={menu?.path}  >{menu?.category}
+                                    <Link to ={`/home/${menu.category}`}  >{menu?.category}
                                     </Link>
                                     {menu.child &&(
                                         <ul className="header__menu__dropdown">
                                             {menu.child.map((childItem, childKey) =>(
                                                 <li key={`${childItem}-${childKey}`}>
-                                                    <Link to={childItem.path} >{childItem.sub_category}</Link>
+                                                    <Link to={`/home/${menu.category}/${menu.sub_category}`} >{childItem.sub_category}</Link>
                                                 </li>
                                             ))}
                                         </ul>
                                         )
                                     }
-                                </li>
-                        ))},
+                                </li> */}
+
                     </ul>
                 </nav>
             </div>

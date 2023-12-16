@@ -1,29 +1,25 @@
-// import React, { useContext } from 'react'
-// import Navbar from '../../../COMPONENTS/Navbar/Navbar';
-// import ProductCard from '../../../COMPONENTS/Products/ProductCard';
-// import AllProductsData from '../../../ASSETS/product';
+import React from 'react'
+// import { useParams } from 'react-router-dom'
+import Navbar from '../../../COMPONENTS/Navbar/Navbar';
+import AllProducts from '../../../COMPONENTS/Products/AllProducts';
+import CategorySidebar from '../../../COMPONENTS/Products/CategorySidebar';
+import './ProductPage.scss'
 
 
-// const ProductPage = () => {
+const ProductPage = () => {
+  // const {procate} = useParams()
+  return (
+    <div>
+        <Navbar/>
+        <div className='Frame__Product_Page'>
+          {/* <BannerSlider/> */}
+          
+          <CategorySidebar className="s1"/>
+          <AllProducts className="s2"/>
+         
+        </div>
+    </div>
+  )
+                }
 
-//   // return (
-//   //   <div>
-//   //       <Navbar/>
-//   //       <div>
-//   //         <h1>Bếp</h1>
-//   //         <div>
-//   //             {/* {AllProductsData.map((item,i) =>{       
-//   //                           return(
-//   //                           // if ()=>
-//   //                           //   {<ProductCard data={item} key={item.id}/>}
-//   //                           // )}
-//   //                       )
-//   //                   } */}
-
-//   //       </div>
-
-//   //   </div>
-//   // )
-
-
-// export default ProductPage
+export default ProductPage

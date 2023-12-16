@@ -3,16 +3,17 @@ import img1 from "../ASSETS/img1.jpg"
 let AllProductsData =[
 {
     id: "NCKDS1",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Nồi NCKDS1",
     price: 1590000,
     category: "Bếp",
     sub_category: "bếp 1",
+    path: "/home/Bep/bep1/nckds1",
     image: img1,
 
 },
 ,{
     id: "NCKDS2",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Nồi NCKDS1",
     price: 1590000,
     category: "Bếp", 
     sub_category: "bếp 1",
@@ -21,7 +22,7 @@ let AllProductsData =[
 },
 {
     id: "NCKDS3",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Nồi NCKDS1",
     price: 1590000,
     category: "Bếp", 
     sub_category: "bếp 1",
@@ -30,7 +31,7 @@ let AllProductsData =[
 },
 {
     id: "NCKDS4",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Nồi NCKDS1",
     price: 1590000,
     category: "Bếp", 
     sub_category: "bếp 2",
@@ -39,7 +40,7 @@ let AllProductsData =[
 },
 {
     id: "NCKDS5",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Nồi NCKDS1",
     price: 1590000,
     category: "Bếp", 
     sub_category: "bếp 2",
@@ -48,7 +49,7 @@ let AllProductsData =[
 },
 {
     id: "NCKDS6",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Tiện ích NCKDS1",
     price: 1590000,
     category: "Tiện ích", 
     sub_category: "tiện ích 2",
@@ -57,7 +58,7 @@ let AllProductsData =[
 },
 {
     id: "NCKDS7",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Tiện ích nk1",
     price: 1590000,
     category: "Tiện ích", 
     sub_category: "tiện ích 2",
@@ -66,7 +67,7 @@ let AllProductsData =[
 },
 {
     id: "NCKDS8",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Nồi ce NCKDS1",
     price: 1590000,
     category: "Bếp", 
     image: img1,
@@ -74,17 +75,16 @@ let AllProductsData =[
 },
 {
     id: "NCKDS8",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Dọn dẹp NCKDS1",
     price: 1590000,
     category: "Dọn dẹp", 
     sub_category: "dọn dẹp 2",
-
     image: img1,
 
 },
 {
     id: "NCKDS0",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "dọn dẹp NCKDS1",
     price: 1590000,
     category: "Dọn dẹp", 
     image: img1,
@@ -92,7 +92,7 @@ let AllProductsData =[
 },
 {
     id: "NCKDS10",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Dọn dẹp use NCKDS1",
     price: 1590000,
     category: "Dọn dẹp", 
     image: img1,
@@ -100,7 +100,7 @@ let AllProductsData =[
 },
 {
    id: "NCKDS11",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Dọn dẹp ouse NCKDS1",
     price: 1590000,
     category: "Dọn dẹp", 
     image: img1,
@@ -108,7 +108,7 @@ let AllProductsData =[
 },
 {
     id: "NCKDS12",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Dọn dẹp NCKDS1",
     price: 1590000,
     category: "Dọn dẹp", 
     image: img1,
@@ -116,7 +116,7 @@ let AllProductsData =[
 }
 ,{
     id: "NCKDS13",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Dọn dẹp NCKDS1",
     price: 1590000,
     category: "Tiện ích", 
     image: img1,
@@ -124,7 +124,7 @@ let AllProductsData =[
 }
 ,{
     id: "NCKDS14",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Dọn dẹp Sunhouse NCKDS1",
     price: 1590000,
     category: "Tiện ích", 
     image: img1,
@@ -132,11 +132,10 @@ let AllProductsData =[
 }
 ,{
     id: "NCKDS15",
-    name: "Nồi chiên không dầu 6L Sunhouse NCKDS1",
+    name: "Dọn dẹp NCKDS1",
     price: 1590000,
     category: "Tiện ích", 
     image: img1,
-
 },
 ]
 
